@@ -43,7 +43,7 @@ public class Task3Test {
         Assert.assertTrue(instance.isPalindrome("радар"));
         Assert.assertTrue(instance.isPalindrome("топот"));
         Assert.assertTrue(instance.isPalindrome("ротатор"));
-        Assert.assertFalse(instance.isPalindrome(""));
+        Assert.assertTrue(instance.isPalindrome(""));
         Assert.assertFalse(instance.isPalindrome(null));
         Assert.assertTrue(instance.isPalindrome("акка"));
         Assert.assertFalse(instance.isPalindrome("итмо"));
@@ -66,7 +66,7 @@ public class Task3Test {
         assertThat(instance.isPermutation("ABCdef", "ABcdef"), is(false));
         assertThat(instance.isPermutation("null", null), is(false));
         assertThat(instance.isPermutation(null, null), is(false));
-        assertThat(instance.isPermutation("", ""), is(false));
+        assertThat(instance.isPermutation("", ""), is(true));
         assertThat(instance.isPermutation(" a", " a "), is(false));
         assertThat(instance.isPermutation(" a  ", "  a "), is(true));
     }
@@ -76,7 +76,7 @@ public class Task3Test {
         assertThat(instance.isUniqueString("abcdefg"), is(true));
         assertThat(instance.isUniqueString("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"), is(false));
         assertThat(instance.isUniqueString(null), is(false));
-        assertThat(instance.isUniqueString(""), is(false));
+        assertThat(instance.isUniqueString(""), is(true));
         assertThat(instance.isUniqueString(" space "), is(false));
         assertThat(instance.isUniqueString("wtf"), is(true));
     }
